@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0A1430">
+<title>Harbor Air Heating &amp; Cooling (concept design by Cervus Digital)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mid:#0A1430; --navy:#0F1F47; --steel:#22386E; --silver:#C7D0DD; --bright:#EEF2F8; --ice:#8FB8FF; --dim:#97A3BC; --warm:#FFB27A;
+  --line:rgba(199,208,221,.18); --f:'Archivo',system-ui,sans-serif;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;font-family:var(--f);font-size:17.5px;line-height:1.6;color:var(--bright);background:var(--mid)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(900px 600px at 85% -10%,rgba(143,184,255,.18),transparent 60%),radial-gradient(800px 500px at -10% 30%,rgba(34,56,110,.55),transparent 60%),linear-gradient(180deg,#0A1430,#081026 70%)}
+a{color:var(--ice)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[role=slider]:focus-visible{outline:2px solid var(--ice);outline-offset:3px;border-radius:10px}
+.concept{background:#060C1E;color:var(--dim);font-size:14px;text-align:center;padding:9px 16px;border-bottom:1px solid var(--line)}
+.concept a{color:var(--silver)}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{margin:0;line-height:1.04;font-weight:700;letter-spacing:-.015em}
+h1{font-size:clamp(46px,6.6vw,88px);font-stretch:112%;font-weight:750}
+h2{font-size:clamp(32px,4vw,50px);font-stretch:108%}
+h3{font-size:21px;font-stretch:104%}
+/* chrome text: the gradient repeats on every line (box-decoration-break), so no line looks accented */
+.chrome{background:linear-gradient(180deg,#FFFFFF 0%,#E3E9F2 40%,#9AA6BC 52%,#DCE3EE 64%,#FFFFFF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p{margin:0 0 1em;max-width:60ch}
+
+/* glass + silver controls */
+.glass{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.03) 46%,rgba(255,255,255,.015));border:1px solid var(--line);border-radius:22px;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 30px 60px -36px rgba(0,0,0,.9);backdrop-filter:blur(12px)}
+.glass::before{content:"";position:absolute;left:1px;right:1px;top:1px;height:42%;border-radius:21px 21px 50% 50%/21px 21px 18px 18px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,0));pointer-events:none}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 17px/1 var(--f);text-decoration:none;padding:17px 24px;border-radius:14px;cursor:pointer;border:1px solid transparent;transition:transform .15s ease,filter .2s ease}
+.btn.silver{color:#0A1430;background:linear-gradient(180deg,#FFFFFF 0%,#E1E7F0 45%,#B4BFD1 52%,#D7DEE9 100%);border-color:rgba(255,255,255,.7);box-shadow:inset 0 1px 0 #fff,inset 0 -3px 8px rgba(10,20,48,.18),0 14px 30px -14px rgba(143,184,255,.55)}
+.btn.silver:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.btn.line{color:var(--bright);border-color:rgba(199,208,221,.4);background:rgba(255,255,255,.04)}
+.btn.line:hover{border-color:var(--silver);background:rgba(255,255,255,.08)}
+
+/* header */
+header.top{position:sticky;top:0;z-index:30;background:rgba(10,20,48,.72);backdrop-filter:blur(16px) saturate(1.3);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:28px;height:74px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--bright);font-weight:750;font-stretch:115%;font-size:21px}
+.logo svg{width:40px;height:40px}
+nav.links{display:flex;gap:26px;margin-left:auto}
+nav.links a{color:var(--dim);text-decoration:none;font-weight:600;font-size:15.5px}
+nav.links a:hover{color:var(--bright)}
+.bar .btn{padding:12px 16px;font-size:15.5px;white-space:nowrap}
+.logo{white-space:nowrap}
+@media (max-width:860px){nav.links{display:none}.bar{justify-content:space-between}}
+@media (max-width:480px){.logo{font-size:18px;gap:9px}.logo svg{width:34px;height:34px}.bar .btn{padding:10px 12px;font-size:14px}}
+
+/* hero */
+.hero{padding:72px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}}
+.hero .lead{font-size:clamp(18px,1.6vw,21px);color:#C3CCDD;margin:22px 0 30px;max-width:44ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.facts{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);padding:0;overflow:hidden}
+.facts div{padding:18px 20px}
+.facts div+div{border-left:1px solid var(--line)}
+.facts dt{font-size:14px;color:var(--dim)}
+.facts dd{margin:4px 0 0;font-weight:700;font-size:17px;font-stretch:106%}
+@media (max-width:620px){.facts{grid-template-columns:1fr}.facts div+div{border-left:0;border-top:1px solid var(--line)}}
+
+/* thermostat */
+.thermo{padding:28px;text-align:center}
+.dial{position:relative;width:min(330px,78vw);aspect-ratio:1;margin:6px auto 18px;touch-action:none;cursor:grab;user-select:none}
+.dial:active{cursor:grabbing}
+.dial:focus-visible{border-radius:50%;outline-offset:-4px}
+.dial svg{width:100%;height:100%;overflow:visible}
+.track{fill:none;stroke:rgba(255,255,255,.08);stroke-width:16;stroke-linecap:round}
+.arc{fill:none;stroke:url(#arcG);stroke-width:16;stroke-linecap:round;transition:stroke-dashoffset .35s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 0 10px rgba(143,184,255,.55))}
+.thermo.heat .arc{stroke:url(#arcH);filter:drop-shadow(0 0 10px rgba(255,178,122,.5))}
+.face{position:absolute;inset:16%;border-radius:50%;background:radial-gradient(circle at 36% 28%,#2B467F,#0F1F47 55%,#0A1430);box-shadow:inset 0 2px 0 rgba(255,255,255,.22),inset 0 -14px 30px rgba(0,0,0,.45),0 18px 40px -16px rgba(0,0,0,.9);display:grid;place-items:center;align-content:center;gap:2px}
+.face::before{content:"";position:absolute;left:14%;right:14%;top:6%;height:38%;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0));pointer-events:none}
+.mode{font-size:14px;font-weight:600;color:var(--ice)}
+.thermo.heat .mode{color:var(--warm)}
+.temp{font-size:clamp(56px,9vw,84px);font-weight:750;font-stretch:90%;line-height:1;letter-spacing:-.03em}
+.inside{font-size:14px;color:var(--dim)}
+.knob{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:linear-gradient(180deg,#fff,#B4BFD1);box-shadow:0 0 0 4px rgba(10,20,48,.8),0 4px 10px rgba(0,0,0,.6);pointer-events:none}
+.steps-row{display:flex;justify-content:center;gap:12px;margin-bottom:14px}
+.round{width:52px;height:52px;border-radius:50%;font:700 24px var(--f);color:#0A1430;border:1px solid rgba(255,255,255,.7);cursor:pointer;background:linear-gradient(180deg,#fff,#D3DAE6 50%,#AEB9CB 52%,#D9E0EA)}
+.thermo p{margin:0 auto 18px;color:#C3CCDD;font-size:16px}
+
+/* quick actions */
+.qa{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:960px){.qa{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.qa{grid-template-columns:1fr}}
+.qa button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:10px;padding:22px;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.025));border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.16);transition:border-color .2s,background .2s}
+.qa button:hover{border-color:rgba(199,208,221,.5);background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.04))}
+.qa button:focus-visible{outline:2px solid var(--ice);outline-offset:3px}
+.qa svg{width:38px;height:38px}
+.qa b{font-size:20px;font-stretch:106%}
+.qa span{font-size:15px;color:var(--dim)}
+.qa em{font-style:normal;font-weight:700;color:var(--silver);font-size:15px}
+
+section{padding:96px 0;scroll-margin-top:74px}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:40px}
+.head p{margin:0;color:var(--dim)}
+@media (max-width:860px){.head{grid-template-columns:1fr;gap:12px}}
+
+/* prices */
+.ptable{width:100%;border-collapse:collapse;font-size:16.5px}
+.ptable th,.ptable td{text-align:left;padding:18px 22px;border-bottom:1px solid var(--line);vertical-align:top}
+.ptable thead th{font-size:14px;color:var(--dim);font-weight:600;padding-top:20px}
+.ptable tbody th{font-weight:700;font-stretch:106%;font-size:18px;white-space:nowrap}
+.ptable td.p{font-weight:750;white-space:nowrap;color:var(--bright);font-size:18px}
+.ptable td.p small{display:block;font-weight:500;font-size:14px;color:var(--dim)}
+.ptable tr:last-child th,.ptable tr:last-child td{border-bottom:0}
+.ptable .club th{color:var(--ice)}
+.scroll{overflow-x:auto}
+.ptable{min-width:640px}
+
+/* visit sequence */
+.seq{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+@media (max-width:900px){.seq{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.seq{grid-template-columns:1fr}}
+.seq li{padding:24px;counter-increment:s}
+.seq li::after{content:counter(s);position:absolute;top:18px;right:20px;font-size:44px;font-weight:750;font-stretch:80%;color:rgba(199,208,221,.16)}
+.seq h3{margin-bottom:8px}
+.seq p{margin:0;font-size:15.5px;color:var(--dim)}
+
+/* area */
+.area{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media (max-width:860px){.area{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chips span{padding:10px 16px;border-radius:999px;font-weight:600;font-size:15.5px;border:1px solid rgba(199,208,221,.3);background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.02))}
+.radar{aspect-ratio:1;max-width:420px;width:100%;margin-inline:auto;border-radius:50%;position:relative;background:radial-gradient(circle,rgba(143,184,255,.12) 0 18%,transparent 18.5% 37%,rgba(143,184,255,.07) 37.5% 56%,transparent 56.5%),radial-gradient(circle,#13265A,#0A1430 70%);border:1px solid var(--line)}
+.radar::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(143,184,255,.35),transparent 18%);animation:sweep 6s linear infinite}
+@keyframes sweep{to{transform:rotate(360deg)}}
+.radar i{position:absolute;width:12px;height:12px;margin:-6px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(143,184,255,.25),0 0 14px var(--ice)}
+.radar span{position:absolute;font-size:13px;font-weight:600;color:var(--silver);transform:translate(-50%,10px);white-space:nowrap}
+
+/* reviews + faq */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:860px){.revs{grid-template-columns:1fr}}
+.revs figure{margin:0;padding:24px}
+.revs .st{color:var(--silver);letter-spacing:3px}
+.revs blockquote{margin:10px 0 14px;font-size:17px;color:#C3CCDD}
+.revs figcaption{font-weight:700;font-size:15px}
+.faq{max-width:820px}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-weight:700;font-size:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--silver);font-size:24px;line-height:1;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--dim)}
+
+/* booking */
+.book .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+@media (max-width:900px){.book .wrap{grid-template-columns:1fr}}
+.call-big{display:inline-block;margin-top:16px;font-size:clamp(26px,3vw,36px);font-weight:750;font-stretch:108%;text-decoration:none}
+form{display:grid;gap:16px;padding:28px}
+label{display:grid;gap:6px;font-weight:600;font-size:15px;color:#C3CCDD}
+input,select,textarea{font:500 16.5px var(--f);padding:14px;border-radius:12px;border:1px solid rgba(199,208,221,.28);background:rgba(6,12,30,.65);color:var(--bright)}
+input:focus,select:focus,textarea:focus{border-color:var(--ice);box-shadow:0 0 0 3px rgba(143,184,255,.18)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:540px){.two{grid-template-columns:1fr}}
+.when{display:flex;flex-wrap:wrap;gap:8px}
+.when label{display:block}
+.when input{position:absolute;opacity:0;pointer-events:none}
+.when span{display:inline-block;padding:11px 16px;border-radius:999px;border:1px solid rgba(199,208,221,.3);font-weight:600;color:var(--bright);cursor:pointer}
+.when input:checked + span{background:linear-gradient(180deg,#fff,#C9D2DF);color:#0A1430;border-color:#fff}
+.when input:focus-visible + span{outline:2px solid var(--ice);outline-offset:2px}
+.done{font-weight:600;color:var(--ice);min-height:1.6em;margin:0}
+footer{padding:34px 0;border-top:1px solid var(--line);font-size:15px;color:var(--dim)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{color:var(--silver)}
+</style>
+</head>
+<body>
+<div class="concept">Concept design by <a href="../../">Cervus Digital</a>. Harbor Air is a sample business, and the phone number, hours and prices are placeholders.</div>
+
+<header class="top"><div class="wrap bar">
+  <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#9AA6BC"/><stop offset="1" stop-color="#E6EBF3"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="#0F1F47" stroke="rgba(199,208,221,.4)"/><path d="M8 16c5-3 9 3 14 0s9 3 10 1M8 23c5-3 9 3 14 0s9 3 10 1M8 30c5-3 9 3 14 0s9 3 10 1" fill="none" stroke="url(#lg)" stroke-width="2.6" stroke-linecap="round"/></svg>Harbor Air</a>
+  <nav class="links" aria-label="Main"><a href="#services">Services</a><a href="#prices">Prices</a><a href="#area">Service area</a><a href="#book">Book</a></nav>
+  <a class="btn silver" href="tel:+17145550142">(714) 555-0142</a>
+</div></header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title" style="padding-top:72px">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-title"><span class="chrome">Comfort, restored today.</span></h1>
+        <p class="lead">Same-day AC and heating repair across Huntington Beach, Fountain Valley and Westminster. You get the price before we start, every time.</p>
+        <div class="ctas"><a class="btn silver" href="#book">Book a same-day visit</a><a class="btn line" href="tel:+17145550142">Call (714) 555-0142</a></div>
+        <dl class="glass facts">
+          <div><dt>Open today</dt><dd>7 am to 9 pm</dd></div>
+          <div><dt>Typical arrival</dt><dd>Within 4 hours</dd></div>
+          <div><dt>Diagnostic</dt><dd>$79, waived with repair</dd></div>
+        </dl>
+      </div>
+      <div class="glass thermo" id="thermo">
+        <div class="dial" id="dial" role="slider" tabindex="0" aria-label="Target temperature" aria-valuemin="60" aria-valuemax="85" aria-valuenow="72" aria-valuetext="72 degrees, cooling">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <linearGradient id="arcG" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#5B8BEA"/><stop offset="1" stop-color="#DCE8FF"/></linearGradient>
+              <linearGradient id="arcH" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FF8F5A"/><stop offset="1" stop-color="#FFE0C2"/></linearGradient>
+            </defs>
+            <path class="track" d="M41.5 158.5 A82 82 0 1 1 158.5 158.5"/>
+            <path class="arc" id="arc" d="M41.5 158.5 A82 82 0 1 1 158.5 158.5"/>
+          </svg>
+          <div class="face"><span class="mode" id="mode">Cooling to</span><span class="temp" id="temp">72°</span><span class="inside">Inside now 81°</span></div>
+          <span class="knob" id="knob"></span>
+        </div>
+        <div class="steps-row"><button class="round" type="button" id="down" aria-label="Lower the target temperature">−</button><button class="round" type="button" id="up" aria-label="Raise the target temperature">+</button></div>
+        <p id="tmsg">Pick the temperature you want. We'll get the house there.</p>
+        <a class="btn silver" href="#book" id="tbook">Book a cooling repair</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" aria-labelledby="svc-title" style="padding-top:24px">
+    <div class="wrap">
+      <div class="head"><h2 id="svc-title">What's going on at home?</h2><p>Tap the one that fits. It starts your booking with the right service already picked.</p></div>
+      <div class="qa">
+        <button type="button" data-need="AC repair"><svg viewBox="0 0 40 40" fill="none" stroke="#C7D0DD" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M20 4v32M6 12l28 16M6 28l28-16"/><path d="M16 6l4 4 4-4M16 34l4-4 4 4"/></svg><b>AC isn't cooling</b><span>Warm air, strange noises, or it won't turn on.</span><em>$79 diagnostic</em></button>
+        <button type="button" data-need="Heating repair"><svg viewBox="0 0 40 40" fill="none" stroke="#C7D0DD" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M20 5c6 7 9 11 9 17a9 9 0 01-18 0c0-4 3-8 4-11 2 4 3 5 5 5 0-4-1-7 0-11z"/></svg><b>No heat</b><span>Furnaces, heat pumps and wall heaters.</span><em>$79 diagnostic</em></button>
+        <button type="button" data-need="Tune-up"><svg viewBox="0 0 40 40" fill="none" stroke="#C7D0DD" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="20" cy="20" r="13"/><path d="M20 12v8l6 4"/></svg><b>Time for a tune-up</b><span>A 21-point check before the season turns.</span><em>$89 per system</em></button>
+        <button type="button" data-need="New system estimate"><svg viewBox="0 0 40 40" fill="none" stroke="#C7D0DD" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="6" y="10" width="28" height="20" rx="3"/><path d="M11 16h18M11 21h18M11 26h10"/></svg><b>Replace my system</b><span>Right-sized options with monthly payments.</span><em>Free in-home estimate</em></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices" aria-labelledby="price-title" style="padding-top:20px">
+    <div class="wrap">
+      <div class="head"><h2 id="price-title">Prices, before we start.</h2><p>Flat prices for the common jobs. For anything bigger, the technician gives you a written price and you decide.</p></div>
+      <div class="glass scroll"><table class="ptable">
+        <caption style="position:absolute;left:-9999px">Services and prices</caption>
+        <thead><tr><th scope="col">Service</th><th scope="col">What's included</th><th scope="col">Price</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">AC repair</th><td>Full diagnosis, written price, most repairs done the same visit</td><td class="p">$79<small>waived with repair</small></td></tr>
+          <tr><th scope="row">Heating repair</th><td>Furnaces, heat pumps and wall heaters, safety check included</td><td class="p">$79<small>waived with repair</small></td></tr>
+          <tr><th scope="row">Tune-up</th><td>21-point check, filter change, coil rinse and a written report</td><td class="p">$89<small>per system</small></td></tr>
+          <tr><th scope="row">New system</th><td>In-home sizing, three clear options, monthly payment plans</td><td class="p">Free<small>estimate</small></td></tr>
+          <tr class="club"><th scope="row">Comfort Club</th><td>Two tune-ups a year, priority booking and 10% off repairs</td><td class="p">$15<small>a month</small></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="visit-title" style="padding-top:20px">
+    <div class="wrap">
+      <div class="head"><h2 id="visit-title">How a visit goes.</h2><p>The same four steps every time, so you always know what happens next.</p></div>
+      <ol class="seq">
+        <li class="glass"><h3>You book</h3><p>Online or by phone. Same-day slots open until 2 pm.</p></li>
+        <li class="glass"><h3>We text you</h3><p>Your technician's name and photo when they're on the way.</p></li>
+        <li class="glass"><h3>You approve the price</h3><p>Nothing starts until you've seen and agreed to the price.</p></li>
+        <li class="glass"><h3>It's covered</h3><p>Every repair is covered for a full year, parts and labor.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="area" aria-labelledby="area-title" style="padding-top:20px">
+    <div class="wrap area">
+      <div>
+        <h2 id="area-title">Where we work.</h2>
+        <p style="margin-top:16px;color:var(--dim)">Based in Huntington Beach. Most of these cities are within 25 minutes of a technician on any given day.</p>
+        <div class="chips"><span>Huntington Beach</span><span>Fountain Valley</span><span>Westminster</span><span>Seal Beach</span><span>Costa Mesa</span><span>Garden Grove</span></div>
+      </div>
+      <div class="radar" aria-hidden="true">
+        <i style="left:50%;top:50%"></i><span style="left:50%;top:50%">Huntington Beach</span>
+        <i style="left:58%;top:30%"></i><span style="left:58%;top:30%">Fountain Valley</span>
+        <i style="left:36%;top:30%"></i><span style="left:36%;top:30%">Westminster</span>
+        <i style="left:22%;top:42%"></i><span style="left:22%;top:42%">Seal Beach</span>
+        <i style="left:76%;top:52%"></i><span style="left:76%;top:52%">Costa Mesa</span>
+        <i style="left:52%;top:14%"></i><span style="left:52%;top:14%">Garden Grove</span>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="rev-title" style="padding-top:20px">
+    <div class="wrap">
+      <h2 id="rev-title" style="margin-bottom:30px">What neighbors say.</h2>
+      <div class="revs">
+        <figure class="glass"><div class="st" aria-label="5 stars">★★★★★</div><blockquote>Your best Google review goes here, word for word.</blockquote><figcaption>Customer name, city</figcaption></figure>
+        <figure class="glass"><div class="st" aria-label="5 stars">★★★★★</div><blockquote>A second real review, ideally one that mentions speed or price.</blockquote><figcaption>Customer name, city</figcaption></figure>
+        <figure class="glass"><div class="st" aria-label="5 stars">★★★★★</div><blockquote>A third real review, ideally one about a new system install.</blockquote><figcaption>Customer name, city</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq-title" style="padding-top:20px">
+    <div class="wrap">
+      <h2 id="faq-title" style="margin-bottom:26px">Common questions.</h2>
+      <div class="faq">
+        <details><summary>Do you charge extra for evenings or weekends?</summary><p>No. The same prices apply seven days a week, including evening visits.</p></details>
+        <details><summary>What if the repair costs more than I expected?</summary><p>You see the price before any work starts. If you'd rather not go ahead, you only pay the $79 diagnostic.</p></details>
+        <details><summary>Do you offer financing on new systems?</summary><p>Yes. Your estimate includes monthly payment options alongside the full price, so you can compare.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book" aria-labelledby="book-title">
+    <div class="wrap">
+      <div>
+        <h2 id="book-title"><span class="chrome">Book a visit.</span></h2>
+        <p style="margin-top:16px;color:var(--dim)">Tell us what's going on and we'll text you a time. In a hurry? Calling is fastest.</p>
+        <a class="call-big chrome" href="tel:+17145550142">(714) 555-0142</a>
+      </div>
+      <form class="glass" id="bookForm">
+        <label>What do you need?<select id="need" name="need"><option>AC repair</option><option>Heating repair</option><option>Tune-up</option><option>New system estimate</option></select></label>
+        <fieldset style="border:0;padding:0;margin:0"><legend style="font-weight:600;font-size:15px;color:#C3CCDD;margin-bottom:8px">When works best?</legend>
+          <div class="when"><label><input type="radio" name="when" value="Today" checked><span>Today</span></label><label><input type="radio" name="when" value="Tomorrow"><span>Tomorrow</span></label><label><input type="radio" name="when" value="This week"><span>This week</span></label></div></fieldset>
+        <div class="two"><label>Name<input name="name" autocomplete="name" required></label><label>Phone<input name="phone" type="tel" autocomplete="tel" required></label></div>
+        <label>Zip code<input name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="10"></label>
+        <label>Anything else?<textarea name="msg" rows="3" placeholder="It's been blowing warm air since this morning…"></textarea></label>
+        <div><button class="btn silver" type="submit">Request a time</button></div>
+        <p class="done" id="done" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>Harbor Air Heating &amp; Cooling, Huntington Beach, CA</span><span>Concept by <a href="../../">Cervus Digital</a></span></div></footer>
+
+<script>
+(function(){
+  var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var MIN=60,MAX=85,INSIDE=81,val=72,dial=document.getElementById('dial'),arc=document.getElementById('arc'),knob=document.getElementById('knob'),th=document.getElementById('thermo');
+  var LEN=arc.getTotalLength();arc.style.strokeDasharray=LEN;
+  /* The ring runs clockwise from 135° (bottom left) through the top to 405° (bottom right), in screen angles. */
+  var START=135,SWEEP=270,R=41; // R: ring radius as a % of the dial (82 of 200)
+  function render(){
+    var k=(val-MIN)/(MAX-MIN);arc.style.strokeDashoffset=LEN*(1-k);
+    var ang=(START+k*SWEEP)*Math.PI/180;knob.style.left=(50+R*Math.cos(ang))+'%';knob.style.top=(50+R*Math.sin(ang))+'%';
+    var heat=val>INSIDE;th.classList.toggle('heat',heat);
+    var mode=val===INSIDE?'Holding at':heat?'Heating to':'Cooling to';
+    document.getElementById('mode').textContent=mode;document.getElementById('temp').textContent=val+'°';
+    dial.setAttribute('aria-valuenow',val);dial.setAttribute('aria-valuetext',val+' degrees, '+mode.toLowerCase().replace(' to','').replace(' at',''));
+    var b=document.getElementById('tbook');b.textContent=heat?'Book a heating repair':'Book a cooling repair';b.dataset.need=heat?'Heating repair':'AC repair';
+    document.getElementById('tmsg').textContent=val===INSIDE?'Pick the temperature you want. We\'ll get the house there.':'It\'s '+INSIDE+'° inside. A '+(heat?'heating':'cooling')+' visit gets you to '+val+'°.';
+  }
+  function set(v){val=Math.max(MIN,Math.min(MAX,Math.round(v)));render();}
+  function fromPoint(e){var r=dial.getBoundingClientRect(),x=e.clientX-(r.left+r.width/2),y=e.clientY-(r.top+r.height/2);
+    var deg=(Math.atan2(y,x)*180/Math.PI+360)%360,rel=(deg-START+360)%360;
+    if(rel>SWEEP)rel=rel<SWEEP+(360-SWEEP)/2?SWEEP:0; /* the gap at the bottom snaps to the nearer end */
+    set(MIN+rel/SWEEP*(MAX-MIN));}
+  var drag=false;
+  dial.addEventListener('pointerdown',function(e){drag=true;dial.setPointerCapture(e.pointerId);fromPoint(e);});
+  dial.addEventListener('pointermove',function(e){if(drag)fromPoint(e);});
+  dial.addEventListener('pointerup',function(){drag=false;});
+  dial.addEventListener('keydown',function(e){if(e.key==='ArrowUp'||e.key==='ArrowRight'){set(val+1);e.preventDefault();}if(e.key==='ArrowDown'||e.key==='ArrowLeft'){set(val-1);e.preventDefault();}if(e.key==='Home'){set(MIN);e.preventDefault();}if(e.key==='End'){set(MAX);e.preventDefault();}});
+  document.getElementById('up').onclick=function(){set(val+1);};document.getElementById('down').onclick=function(){set(val-1);};
+  /* one orchestrated moment: the dial settles from the current 81° down to 72° */
+  if(still){render();}else{val=INSIDE;render();setTimeout(function(){var s=null;(function step(ts){if(!s)s=ts;var k=Math.min(1,(ts-s)/1200),e=1-Math.pow(1-k,3);val=Math.round(INSIDE+(72-INSIDE)*e);render();if(k<1&&!drag)requestAnimationFrame(step);})(performance.now());},600);}
+
+  /* anything that books pre-selects the service */
+  var need=document.getElementById('need');
+  function goBook(n){need.value=n;document.getElementById('book').scrollIntoView({behavior:still?'auto':'smooth'});setTimeout(function(){need.focus({preventScroll:true});},still?0:500);}
+  document.querySelectorAll('.qa button').forEach(function(b){b.addEventListener('click',function(){goBook(b.dataset.need);});});
+  document.getElementById('tbook').addEventListener('click',function(e){e.preventDefault();goBook(this.dataset.need||'AC repair');});
+
+  document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();var el=e.target.elements,nm=el['name'],ph=el['phone'],done=document.getElementById('done');
+    if(!nm.value.trim()||!ph.value.trim()){done.textContent='Add your name and phone so we can text you a time.';(nm.value.trim()?ph:nm).focus();return;}
+    done.textContent='Thanks, '+nm.value.trim().split(' ')[0]+'. We\'ll text '+ph.value.trim()+' with a time for your '+need.value.toLowerCase().replace(/^ac /,'AC ')+'. (Sample site: nothing was sent.)';});
+})();
+</script>
+</body>
+</html>
