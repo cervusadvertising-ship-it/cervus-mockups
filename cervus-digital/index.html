@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cervus Digital: websites for Orange County businesses</title>
+<meta name="description" content="Fast, phone-friendly websites for Orange County businesses. See a free homepage mockup before you pay. From $800, ready in 5–7 business days.">
+<meta name="theme-color" content="#070814">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#070814; --void2:#0D1030; --panel:rgba(18,22,58,.62); --edge:rgba(140,160,255,.22);
+  --text:#E9ECFF; --dim:#9BA3D1; --cyan:#5CF2FF; --mag:#FF3DB8; --uv:#7B5CFF; --chrome:#C8D0E0;
+  --display:'Chakra Petch',system-ui,sans-serif; --body:'Sora',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--void);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+a{color:var(--cyan)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(42px,6.4vw,86px);font-weight:700}
+h2{font-size:clamp(30px,4vw,52px)}
+h3{font-size:22px}
+p{margin:0 0 1em;max-width:62ch}
+.sr{position:absolute;left:-9999px}
+
+/* background life: scanlines + cursor glow */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 3px);mix-blend-mode:overlay}
+.glow{position:fixed;left:0;top:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(123,92,255,.22),rgba(92,242,255,.08) 40%,transparent 70%);transform:translate(var(--gx,50vw),var(--gy,30vh));transition:transform .25s ease-out}
+
+/* header */
+header.top{position:sticky;top:0;z-index:40;background:rgba(7,8,20,.72);backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid var(--edge)}
+.bar{display:flex;align-items:center;gap:26px;height:70px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);font-family:var(--display);font-weight:700;font-size:20px}
+.brand svg{width:40px;height:40px;filter:drop-shadow(0 0 10px rgba(92,242,255,.45))}
+nav.links{display:flex;gap:24px;margin-left:auto}
+nav.links a{color:var(--dim);text-decoration:none;font-size:15px;font-weight:500}
+nav.links a:hover{color:var(--text)}
+.call{font-family:var(--display);font-weight:600;text-decoration:none;color:var(--void);background:var(--cyan);padding:10px 16px;border-radius:8px;font-size:15px;white-space:nowrap;box-shadow:0 0 22px rgba(92,242,255,.45)}
+.call:hover{background:#9AF7FF}
+.brand,.call{white-space:nowrap}
+@media (max-width:860px){nav.links{display:none}.bar{justify-content:space-between}}
+@media (max-width:480px){.brand{font-size:17px;gap:9px}.brand svg{width:34px;height:34px}.call{padding:9px 12px;font-size:14px}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px/1 var(--display);padding:16px 22px;border-radius:10px;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .15s ease,box-shadow .2s ease,background .2s ease}
+.btn-hot{background:linear-gradient(100deg,var(--mag),var(--uv));color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.12) inset,0 10px 30px -8px rgba(255,61,184,.7)}
+.btn-hot:hover{transform:translateY(-1px);box-shadow:0 0 0 1px rgba(255,255,255,.2) inset,0 14px 36px -8px rgba(255,61,184,.9)}
+.btn-line{color:var(--text);border-color:var(--edge);background:rgba(255,255,255,.03)}
+.btn-line:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* hero */
+.hero{position:relative;min-height:min(860px,100vh);display:flex;align-items:center;overflow:hidden;padding:60px 0 120px}
+#grid{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(1200px 500px at 70% 10%,rgba(123,92,255,.25),transparent 60%),linear-gradient(180deg,rgba(7,8,20,.2),rgba(7,8,20,0) 40%,var(--void) 98%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+@media (max-width:980px){.hero .wrap{grid-template-columns:1fr;gap:44px}}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--dim);border:1px solid var(--edge);border-radius:999px;padding:7px 14px;margin-bottom:26px;background:rgba(13,16,48,.6)}
+.status i{width:8px;height:8px;border-radius:50%;background:#4DFFA6;box-shadow:0 0 10px #4DFFA6;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.hero h1{background:linear-gradient(180deg,#FFFFFF 0%,#DDE3F8 45%,#9AA6D6 52%,#EEF1FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 24px rgba(92,242,255,.18));margin-bottom:24px}
+.hero h1 .ch{display:inline}
+.sub{font-size:clamp(17px,1.5vw,20px);color:#C9CFF2;margin-bottom:30px}
+.rot{color:var(--cyan);font-weight:600;border-bottom:2px solid rgba(92,242,255,.4)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.facts{display:flex;flex-wrap:wrap;gap:22px;font-size:14px;color:var(--dim)}
+.facts b{color:var(--text);font-family:var(--display);font-size:18px;display:block;font-weight:600}
+
+/* live build monitor */
+.monitor{position:relative;border-radius:16px;padding:1px;background:linear-gradient(140deg,rgba(92,242,255,.7),rgba(123,92,255,.4) 40%,rgba(255,61,184,.7));box-shadow:0 40px 90px -30px rgba(123,92,255,.6),0 0 60px -20px rgba(92,242,255,.5)}
+.mon-in{border-radius:15px;background:linear-gradient(180deg,#0E1236,#0A0C24);overflow:hidden}
+.mon-bar{display:flex;align-items:center;gap:8px;padding:11px 14px;border-bottom:1px solid var(--edge);font-size:13px;color:var(--dim)}
+.mon-bar i{width:10px;height:10px;border-radius:50%;background:#2A2F63}
+.mon-bar .url{margin-left:8px;flex:1;background:rgba(255,255,255,.05);border:1px solid var(--edge);border-radius:6px;padding:4px 10px;font-family:var(--display);letter-spacing:.02em;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mon-bar .rec{color:var(--mag);font-family:var(--display);font-weight:600}
+.screen{position:relative;aspect-ratio:16/11;padding:16px;overflow:hidden;--a:#0F1F47;--b:#C7D0DD;--c:#8FB8FF;--bg:#0A1430}
+.screen .site{position:absolute;inset:16px;border-radius:10px;background:var(--bg);overflow:hidden}
+.blk{position:absolute;border-radius:6px;opacity:0;transform:translateY(8px);background:var(--a)}
+.build .blk{animation:place .5s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes place{to{opacity:1;transform:none}}
+.b-nav{left:4%;right:4%;top:5%;height:8%;background:rgba(255,255,255,.08)!important}
+.b-logo{left:6%;top:7.4%;width:16%;height:3.2%;background:var(--b)!important;z-index:2}
+.b-cta{right:6%;top:7%;width:18%;height:4%;background:var(--c)!important;border-radius:20px!important;z-index:2}
+.b-hero{left:4%;right:4%;top:17%;height:40%;background:linear-gradient(135deg,var(--a),color-mix(in srgb,var(--a) 60%,var(--c)))!important}
+.b-h1{left:9%;top:24%;width:46%;height:8%;background:var(--b)!important;z-index:2}
+.b-h1b{left:9%;top:34%;width:32%;height:8%;background:var(--b)!important;z-index:2}
+.b-btn{left:9%;top:46%;width:22%;height:6%;background:var(--c)!important;border-radius:20px!important;z-index:2}
+.b-art{right:9%;top:22%;width:26%;aspect-ratio:1;border-radius:50%!important;background:radial-gradient(circle at 35% 30%,#fff,var(--c) 30%,var(--a) 75%)!important;z-index:2}
+.b-c1,.b-c2,.b-c3{top:61%;height:30%;width:28.6%;background:rgba(255,255,255,.07)!important;border:1px solid rgba(255,255,255,.1)}
+.b-c1{left:4%}.b-c2{left:35.7%}.b-c3{left:67.4%}
+.build .b-nav{animation-delay:.15s}.build .b-logo{animation-delay:.35s}.build .b-cta{animation-delay:.5s}.build .b-hero{animation-delay:.7s}.build .b-h1{animation-delay:1s}.build .b-h1b{animation-delay:1.15s}.build .b-btn{animation-delay:1.35s}.build .b-art{animation-delay:1.55s}.build .b-c1{animation-delay:1.8s}.build .b-c2{animation-delay:1.95s}.build .b-c3{animation-delay:2.1s}
+.scan{position:absolute;left:0;right:0;height:60px;top:-60px;background:linear-gradient(180deg,transparent,rgba(92,242,255,.35),transparent);mix-blend-mode:screen;z-index:3}
+.build .scan{animation:scan 2.4s linear forwards}
+@keyframes scan{to{top:100%}}
+.mon-foot{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-top:1px solid var(--edge);font-size:13px;color:var(--dim)}
+.mon-foot b{color:var(--cyan);font-family:var(--display);font-weight:600}
+.meter{height:3px;background:rgba(255,255,255,.08);position:relative;overflow:hidden}
+.meter span{position:absolute;inset:0 100% 0 0;background:linear-gradient(90deg,var(--cyan),var(--mag))}
+.build .meter span{animation:fill 2.4s ease-out forwards}
+@keyframes fill{to{right:0}}
+.cap-m{font-size:14px;color:var(--dim);margin-top:14px}
+
+/* marquee */
+.marq{border-block:1px solid var(--edge);background:linear-gradient(90deg,rgba(255,61,184,.08),rgba(92,242,255,.08));overflow:hidden;white-space:nowrap;position:relative;z-index:2}
+.marq div{display:inline-flex;gap:46px;padding:16px 0;animation:marq 38s linear infinite;font-family:var(--display);font-size:20px;font-weight:600;color:#C9CFF2}
+.marq div span::after{content:"✦";margin-left:46px;color:var(--mag)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+section{padding:110px 0;position:relative;z-index:2;scroll-margin-top:70px}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:52px}
+.head p{margin:0;color:var(--dim)}
+@media (max-width:860px){.head{grid-template-columns:1fr;gap:14px}}
+
+/* pipeline (a real sequence) */
+.pipe{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative}
+.pipe::before{content:"";position:absolute;left:0;right:0;top:21px;height:2px;background:rgba(255,255,255,.08)}
+.pipe::after{content:"";position:absolute;left:0;top:21px;height:2px;width:0;background:linear-gradient(90deg,var(--cyan),var(--mag));box-shadow:0 0 14px var(--cyan);transition:width 2.2s cubic-bezier(.2,.8,.2,1)}
+.pipe.on::after{width:100%}
+.pipe li{position:relative;padding-top:58px}
+.pipe .dot{position:absolute;top:8px;left:0;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:14px;background:var(--void2);border:1px solid var(--cyan);color:var(--cyan);box-shadow:0 0 14px rgba(92,242,255,.4);z-index:1}
+.pipe h3{margin-bottom:10px}
+.pipe p{font-size:15.5px;color:var(--dim)}
+@media (max-width:900px){.pipe{grid-template-columns:1fr 1fr}.pipe::before,.pipe::after{display:none}}
+@media (max-width:540px){.pipe{grid-template-columns:1fr}}
+
+/* before / after */
+.ba-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+@media (max-width:960px){.ba-wrap{grid-template-columns:1fr;gap:30px}}
+.ba-frame{border-radius:14px;overflow:hidden;border:1px solid var(--edge);box-shadow:0 30px 80px -30px rgba(0,0,0,.9)}
+.ba-stage{position:relative;aspect-ratio:16/11;overflow:hidden;user-select:none;touch-action:none}
+.pane{position:absolute;inset:0;overflow:hidden}
+.pane.before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:0;pointer-events:none}
+.handle::before{content:"";position:absolute;top:0;bottom:0;left:-1px;width:2px;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
+.knob{position:absolute;top:50%;left:0;width:44px;height:44px;transform:translate(-50%,-50%);border-radius:12px;background:var(--void);border:1px solid var(--cyan);color:var(--cyan);display:grid;place-items:center;box-shadow:0 0 18px rgba(92,242,255,.5)}
+.knob svg{width:22px;height:22px}
+.ba-stage input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-stage input:focus-visible + .handle .knob{outline:2px solid var(--mag);outline-offset:3px}
+.tag{position:absolute;bottom:12px;font:600 13px/1 var(--display);padding:7px 10px;border-radius:6px;background:rgba(7,8,20,.8);color:#fff;pointer-events:none}
+.tag.l{left:12px}.tag.r{right:12px;background:var(--uv)}
+.old{background:linear-gradient(#d8d8d8,#bdbdbd);height:100%;font-family:'Times New Roman',serif;color:#111}
+.old .oh{background:#003399;color:#ffff66;text-align:center;padding:10px;font-size:20px;font-weight:bold;border-bottom:4px ridge #c0c0c0}
+.old .om{background:#000;color:#0f0;font-family:'Courier New',monospace;font-size:12px;padding:3px 6px;white-space:nowrap;overflow:hidden}
+.old .ob{display:grid;grid-template-columns:30% 1fr;gap:8px;padding:8px}
+.old .on{background:#eee;border:2px outset #fff;padding:6px;font-size:12px;line-height:1.9}.old .on u{color:#00e;display:block}
+.old .oc{background:#fff;border:2px inset #fff;padding:8px;font-size:13px}.old .oc h4{margin:0 0 6px;color:#c00;text-decoration:underline}
+.old .oi{height:56px;background:repeating-linear-gradient(45deg,#ccc 0 6px,#bbb 6px 12px);border:1px solid #888;margin:6px 0;display:grid;place-items:center;font-size:11px;color:#555}
+.new{height:100%;background:radial-gradient(120% 90% at 80% 0%,#1A2E66,#0A1430 60%);color:#EEF2F8;font-family:var(--body);padding:14px}
+.new .nn{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600}
+.new .nn span{border:1px solid rgba(199,208,221,.5);padding:6px 10px;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.04))}
+.new .nh{display:grid;grid-template-columns:1.2fr .8fr;gap:10px;margin-top:18px;align-items:center}
+.new h5{margin:0 0 8px;font:700 clamp(18px,2.6vw,28px)/1.05 var(--display);background:linear-gradient(180deg,#fff,#AEB9CC 55%,#E6EBF3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.new .np{font-size:11px;color:#AEB9CC;margin:0 0 10px}
+.new em{font-style:normal;font-size:11px;font-weight:600;padding:8px 11px;border-radius:20px;background:linear-gradient(180deg,#DDE5F2,#9EAAC0);color:#0A1430}
+.new .ring{aspect-ratio:1;border-radius:50%;background:conic-gradient(#8FB8FF 0 62%,rgba(255,255,255,.08) 0);display:grid;place-items:center;padding:8px}
+.new .ring div{width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 40% 30%,#22386E,#0A1430);display:grid;place-items:center;font:700 22px var(--display)}
+.new .nr{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:14px}
+.new .nr div{font-size:10px;padding:8px 6px;border-radius:8px;border:1px solid rgba(199,208,221,.25);background:rgba(255,255,255,.05);text-align:center}
+
+/* packages */
+.speeds{display:inline-flex;flex-wrap:wrap;gap:4px;padding:4px;border:1px solid var(--edge);border-radius:12px;background:rgba(13,16,48,.7);margin-bottom:12px}
+.speeds button{font:600 14px/1 var(--display);color:var(--dim);background:transparent;border:0;border-radius:9px;padding:11px 14px;cursor:pointer}
+.speeds button[aria-pressed=true]{background:linear-gradient(100deg,rgba(92,242,255,.22),rgba(123,92,255,.3));color:#fff;box-shadow:0 0 0 1px rgba(92,242,255,.5) inset}
+.speed-note{font-size:14.5px;color:var(--dim);margin:0 0 30px}
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;perspective:1200px}
+@media (max-width:960px){.pk{grid-template-columns:1fr}}
+.card{position:relative;border-radius:18px;padding:30px 26px;background:var(--panel);border:1px solid var(--edge);backdrop-filter:blur(8px);transform-style:preserve-3d;transition:transform .2s ease-out;display:flex;flex-direction:column}
+.card.hot{border-color:transparent;background:linear-gradient(var(--void2),var(--void2)) padding-box,conic-gradient(from var(--ang,0deg),var(--cyan),var(--uv),var(--mag),var(--cyan)) border-box;border:1.5px solid transparent;animation:spin 6s linear infinite;box-shadow:0 30px 80px -30px rgba(255,61,184,.55)}
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes spin{to{--ang:360deg}}
+.card .pop{position:absolute;top:-13px;left:26px;font:600 13px/1 var(--display);padding:7px 11px;border-radius:7px;background:var(--mag);color:#fff;box-shadow:0 0 18px rgba(255,61,184,.6)}
+.card h3{font-size:24px;margin-bottom:6px}
+.card .for{font-size:15px;color:var(--dim);min-height:48px}
+.price{font-family:var(--display);font-weight:700;font-size:48px;letter-spacing:-.02em;margin:18px 0 2px;display:flex;align-items:baseline;gap:6px}
+.price small{font-size:15px;font-weight:500;color:var(--dim);font-family:var(--body)}
+.eta{font-size:14px;color:var(--cyan);margin-bottom:20px}
+.card ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:9px;font-size:15.5px}
+.card li{padding-left:26px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:8px;width:12px;height:12px;border-radius:3px;background:linear-gradient(135deg,var(--cyan),var(--uv));box-shadow:0 0 8px rgba(92,242,255,.6)}
+.card li.no{color:#6D739C}.card li.no::before{background:#2A2F63;box-shadow:none}
+.card .btn{margin-top:auto;justify-content:center}
+.fine{font-size:14.5px;color:var(--dim);margin-top:22px}
+
+/* care */
+.care{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--edge);border-radius:18px;overflow:hidden;background:rgba(13,16,48,.5)}
+.care div{padding:30px 26px}
+.care div+div{border-left:1px solid var(--edge)}
+.care .amt{font-family:var(--display);font-weight:700;font-size:36px}
+.care .amt small{font-family:var(--body);font-size:15px;color:var(--dim);font-weight:400}
+.care h3{margin:6px 0 10px;color:var(--cyan)}
+.care p{font-size:15.5px;color:var(--dim);margin:0}
+@media (max-width:860px){.care{grid-template-columns:1fr}.care div+div{border-left:0;border-top:1px solid var(--edge)}}
+
+/* concepts */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media (max-width:860px){.cg{grid-template-columns:1fr}}
+.cg a{display:block;text-decoration:none;color:inherit;border-radius:18px;overflow:hidden;border:1px solid var(--edge);background:var(--panel)}
+.cg a:hover .th{transform:scale(1.025)}
+.th{aspect-ratio:16/10;position:relative;overflow:hidden;transition:transform .4s ease}
+.cg .cap{padding:20px 22px}
+.cg .cap h3{margin-bottom:6px}
+.cg .cap p{margin:0;font-size:15px;color:var(--dim)}
+.th-ha{background:radial-gradient(120% 100% at 85% 0%,#22386E,#0A1430 62%)}
+.th-ha .t{position:absolute;left:7%;top:16%;font:700 clamp(24px,3.2vw,40px)/1 var(--display);max-width:9ch;background:linear-gradient(180deg,#fff,#AEB9CC 55%,#EEF2F8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.th-ha .r{position:absolute;right:8%;top:50%;width:38%;aspect-ratio:1;transform:translateY(-50%);border-radius:50%;background:conic-gradient(#8FB8FF 0 64%,rgba(255,255,255,.1) 0);padding:10px}
+.th-ha .r::after{content:"72°";position:absolute;inset:10px;border-radius:50%;background:radial-gradient(circle at 38% 30%,#2A4380,#0B1634);display:grid;place-items:center;font:700 clamp(22px,3vw,38px) var(--display);color:#EEF2F8}
+.th-ha .b{position:absolute;left:7%;bottom:14%;padding:11px 16px;border-radius:30px;font:600 14px var(--body);color:#0A1430;background:linear-gradient(180deg,#F2F5FA,#A9B4C8)}
+.th-jr{background:linear-gradient(180deg,#7CD6F2 0%,#C9EEF7 52%,#A9D47E 53%,#8DBF5A 100%)}
+.th-jr .t{position:absolute;left:7%;top:12%;font:600 clamp(22px,3vw,36px)/1.05 Georgia,serif;color:#2E4420;max-width:11ch}
+.th-jr .h{position:absolute;left:-10%;right:-10%;bottom:-24%;height:55%;border-radius:50% 50% 0 0;background:#5C8A3C}
+.th-jr .p1,.th-jr .p2{position:absolute;bottom:18%;width:0;height:0;border-left:18px solid transparent;border-right:18px solid transparent;border-bottom:56px solid #2F4A26}
+.th-jr .p1{right:22%}.th-jr .p2{right:14%;transform:scale(1.3);transform-origin:bottom}
+.th-jr .bub{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95),rgba(255,255,255,.25) 32%,rgba(124,214,242,.2) 60%,rgba(255,255,255,.55));border:1px solid rgba(255,255,255,.7)}
+.th-jr .g{position:absolute;left:7%;bottom:14%;padding:11px 18px;border-radius:30px;font:700 14px var(--body);color:#fff;background:linear-gradient(180deg,#9FE0A8,#3E9A4E 55%,#2F7A3C);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 6px 14px -6px rgba(47,122,60,.8)}
+
+/* bundle */
+.bundle{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;padding:32px;border-radius:18px;border:1px solid var(--edge);background:linear-gradient(110deg,rgba(255,61,184,.12),rgba(123,92,255,.1) 50%,rgba(92,242,255,.1))}
+.bundle svg{width:80px;height:80px}
+.bundle p{margin:6px 0 0;color:var(--dim)}
+@media (max-width:760px){.bundle{grid-template-columns:1fr}}
+
+/* faq */
+.faq{max-width:840px}
+.faq details{border-top:1px solid var(--edge)}
+.faq details:last-child{border-bottom:1px solid var(--edge)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-weight:600;font-size:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--display);font-size:24px;line-height:1;color:var(--cyan);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--dim)}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:56px}
+@media (max-width:900px){.contact .wrap{grid-template-columns:1fr;gap:32px}}
+.direct{display:grid;gap:8px;margin-top:26px}
+.direct a{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.2vw,26px);text-decoration:none;color:var(--text)}
+.direct a:hover{color:var(--cyan)}
+form.ask{display:grid;gap:16px;padding:28px;border-radius:18px;border:1px solid var(--edge);background:var(--panel)}
+.field{display:grid;gap:6px}
+.field label{font-weight:600;font-size:14.5px}
+.field input,.field textarea,.field select{font:400 16px/1.4 var(--body);padding:13px 14px;border-radius:10px;border:1px solid var(--edge);background:rgba(7,8,20,.7);color:var(--text)}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(92,242,255,.15)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:560px){.two{grid-template-columns:1fr}}
+.note{font-size:14px;color:var(--dim);margin:0}
+footer{padding:40px 0 60px;color:var(--dim);font-size:14.5px;position:relative;z-index:2;border-top:1px solid var(--edge)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+footer a{color:var(--text)}
+</style>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Cervus Digital, back to top">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <linearGradient id="chr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".42" stop-color="#C7D0DE"/><stop offset=".5" stop-color="#2B3654"/><stop offset=".62" stop-color="#6F7FA8"/><stop offset=".86" stop-color="#DCE3EE"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+          <linearGradient id="holo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5CF2FF"/><stop offset=".5" stop-color="#7B5CFF"/><stop offset="1" stop-color="#FF3DB8"/></linearGradient>
+        </defs>
+        <circle cx="32" cy="32" r="30" fill="#0D1030"/>
+        <circle cx="32" cy="32" r="28.5" fill="none" stroke="url(#holo)" stroke-width="2"/>
+        <path fill="url(#chr)" d="M32 50c-3.6 0-6.4-4.6-6.4-9.4 0-2.7 1-4.7 2.4-6.1l-6.8-6.6c-1.6.6-3.4.1-4.4-1.3L12 20.4l2.6-1.2 3.2 5.5 1.2-.4-2.2-7.7 2.7-.8 2.3 8 2.4 2.4 1.4-1.3-3-6.1 2.5-1.2 3.4 6.8 1.6 1.6.9-.3.9.3 1.6-1.6 3.4-6.8 2.5 1.2-3 6.1 1.4 1.3 2.4-2.4 2.3-8 2.7.8-2.2 7.7 1.2.4 3.2-5.5 2.6 1.2-4.8 6.2c-1 1.4-2.8 1.9-4.4 1.3L36 34.5c1.4 1.4 2.4 3.4 2.4 6.1 0 4.8-2.8 9.4-6.4 9.4z"/>
+      </svg>
+      Cervus Digital
+    </a>
+    <nav class="links" aria-label="Main"><a href="#how">How it works</a><a href="#packages">Packages</a><a href="#care">Care plans</a><a href="#work">Concepts</a><a href="#questions">Questions</a></nav>
+    <a class="call" href="tel:+17144008961">714-400-8961</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title" style="padding-top:60px">
+    <canvas id="grid" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div>
+        <div class="status"><i></i>Taking new projects in Orange County</div>
+        <h1 id="hero-title" data-decode>Your business, rebuilt for the internet in a week.</h1>
+        <p class="sub">Fast, phone-friendly websites for <span class="rot" id="rot" aria-live="off">contractors</span>. You see a free mockup of your new homepage before you pay anything.</p>
+        <div class="actions"><a class="btn btn-hot" href="#contact">Get my free mockup</a><a class="btn btn-line" href="#packages">See packages</a></div>
+        <div class="facts"><span><b>From $800</b>one-time build</span><span><b>5–7 days</b>standard delivery</span><span><b>Your domain</b>always in your name</span></div>
+      </div>
+      <figure style="margin:0">
+        <div class="monitor"><div class="mon-in">
+          <div class="mon-bar" aria-hidden="true"><i></i><i></i><i></i><span class="url" id="mUrl">harborair.com</span><span class="rec">● LIVE</span></div>
+          <div class="screen" id="screen" aria-hidden="true">
+            <div class="site">
+              <span class="blk b-nav"></span><span class="blk b-logo"></span><span class="blk b-cta"></span>
+              <span class="blk b-hero"></span><span class="blk b-h1"></span><span class="blk b-h1b"></span><span class="blk b-btn"></span><span class="blk b-art"></span>
+              <span class="blk b-c1"></span><span class="blk b-c2"></span><span class="blk b-c3"></span>
+              <span class="scan"></span>
+            </div>
+          </div>
+          <div class="meter" aria-hidden="true"><span></span></div>
+          <div class="mon-foot" aria-hidden="true"><span>Building <b id="mName">Harbor Air</b></span><span id="mKind">HVAC · Huntington Beach</span></div>
+        </div></div>
+        <figcaption class="cap-m">A live loop of the concept sites below. Each one starts as your free homepage mockup.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="marq" aria-hidden="true"><div>
+    <span>Roofers</span><span>HVAC</span><span>Barbers</span><span>Gyms</span><span>Restaurants</span><span>Landscapers</span><span>Campgrounds</span><span>Plumbers</span><span>Med spas</span><span>Auto shops</span>
+    <span>Roofers</span><span>HVAC</span><span>Barbers</span><span>Gyms</span><span>Restaurants</span><span>Landscapers</span><span>Campgrounds</span><span>Plumbers</span><span>Med spas</span><span>Auto shops</span>
+  </div></div>
+
+  <section id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="head"><h2 id="how-title">From first email to a live site in about two weeks.</h2><p>Most of that time is waiting on your photos and logo. Once I have them, the build itself takes 5–7 business days.</p></div>
+      <ol class="pipe" id="pipe">
+        <li><span class="dot">1</span><h3>Free mockup</h3><p>I design your new homepage with your real business info, so you can see it before deciding anything.</p></li>
+        <li><span class="dot">2</span><h3>Deposit and materials</h3><p>A 50% deposit reserves your spot. You send your logo, photos, services and hours from a simple checklist.</p></li>
+        <li><span class="dot">3</span><h3>Build and revisions</h3><p>I build the full site and send you a private link. You send all your changes in one list.</p></li>
+        <li><span class="dot">4</span><h3>Launch</h3><p>After the final 50%, I connect your domain and test every form and call button. Care plans are optional.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="ba-title" style="padding-top:20px">
+    <div class="wrap ba-wrap">
+      <div>
+        <h2 id="ba-title">Drag the line. Watch a dated site become one that books calls.</h2>
+        <p class="sub" style="margin-top:20px">Harbor Air is a sample business I designed. The left side is the kind of site many local companies still have. The right side is what you'd get.</p>
+      </div>
+      <figure style="margin:0">
+        <div class="ba-frame"><div class="ba-stage" id="baStage" style="--pos:90%">
+          <div class="pane after" aria-hidden="true"><div class="new">
+            <div class="nn"><b>Harbor Air</b><span>Call (714) 555-0142</span></div>
+            <div class="nh"><div><h5>Comfort, restored today.</h5><p class="np">Same-day AC and heating repair across Huntington Beach.</p><em>Book a same-day visit</em></div><div class="ring"><div>72°</div></div></div>
+            <div class="nr"><div>AC not cooling</div><div>No heat</div><div>Tune-up</div><div>New system</div></div>
+          </div></div>
+          <div class="pane before" aria-hidden="true"><div class="old">
+            <div class="oh">~*~ WELCOME TO HARBOR AIR HVAC ~*~</div>
+            <div class="om">*** CALL TODAY FOR ALL YOUR HEATING AND COOLING NEEDS!!! *** BEST PRICES IN TOWN ***</div>
+            <div class="ob"><div class="on"><u>Home</u><u>About Us</u><u>Services</u><u>Coupons!!</u><u>Contact</u></div><div class="oc"><h4>Welcome!!</h4>We have been serving the area since 1998. Click on a link to the left to learn more.<div class="oi">[image]</div>Best viewed in Internet Explorer 6.0</div></div>
+          </div></div>
+          <input type="range" min="0" max="100" value="90" id="baRange" aria-label="Drag to compare the old website with the new one">
+          <div class="handle" aria-hidden="true"><div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6"/></svg></div></div>
+          <span class="tag l" aria-hidden="true">Before</span><span class="tag r" aria-hidden="true">After</span>
+        </div></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="packages" aria-labelledby="pk-title">
+    <div class="wrap">
+      <div class="head"><h2 id="pk-title">Three packages. One price each. No agency markup.</h2><p>Every package is phone-friendly, built to load fast, and handed over with your domain in your name. Pick how fast you need it and the prices update.</p></div>
+      <div class="speeds" role="group" aria-label="Delivery speed">
+        <button type="button" data-fee="0" data-eta="Ready in 5–7 business days" aria-pressed="true">Standard</button>
+        <button type="button" data-fee="150" data-eta="Ready in 3 business days" aria-pressed="false">Priority +$150</button>
+        <button type="button" data-fee="250" data-eta="Ready in 2 business days" aria-pressed="false">Rush +$250</button>
+        <button type="button" data-fee="400" data-eta="Ready the next business day" aria-pressed="false">Next day +$400</button>
+      </div>
+      <p class="speed-note" id="speedNote" aria-live="polite">Standard delivery is included in every price.</p>
+      <div class="pk">
+        <article class="card" data-base="800">
+          <h3>Starter</h3><p class="for">A clean, credible site for a business that runs mostly on word of mouth.</p>
+          <div class="price"><span class="amt">$800</span><small>one time</small></div><div class="eta">Ready in 5–7 business days</div>
+          <ul><li>Up to 4 pages</li><li>Phone-friendly design</li><li>Tap-to-call and contact links</li><li>Polished template style</li><li>Google basics: titles and descriptions</li><li>1 revision round</li><li class="no">Quote form, reviews and FAQ</li></ul>
+          <a class="btn btn-line" href="#contact" data-pick="Starter">Start with Starter</a>
+        </article>
+        <article class="card hot" data-base="1200">
+          <span class="pop">Most popular</span>
+          <h3>Business</h3><p class="for">A site tailored to your business and built to turn visitors into calls and quote requests.</p>
+          <div class="price"><span class="amt">$1,200</span><small>one time</small></div><div class="eta">Ready in 5–7 business days</div>
+          <ul><li>Up to 6 pages</li><li>Custom look for your brand</li><li>Quote or contact form</li><li>Reviews and FAQ sections</li><li>Google basics plus visitor stats</li><li>2 revision rounds</li><li class="no">Online booking</li></ul>
+          <a class="btn btn-hot" href="#contact" data-pick="Business">Choose Business</a>
+        </article>
+        <article class="card" data-base="1800" data-plus="1">
+          <h3>Premium</h3><p class="for">More pages, service areas or online booking. Quoted by what you need.</p>
+          <div class="price"><span class="amt">$1,800+</span><small>one time</small></div><div class="eta">Ready in 5–7 business days</div>
+          <ul><li>As many pages as you need</li><li>Fully custom design</li><li>Online booking</li><li>Service-area pages</li><li>Google basics plus visitor stats</li><li>2 revision rounds</li></ul>
+          <a class="btn btn-line" href="#contact" data-pick="Premium">Ask about Premium</a>
+        </article>
+      </div>
+      <p class="fine">Delivery time starts once I have your deposit, logo, photos and text. Half up front, half at launch.</p>
+    </div>
+  </section>
+
+  <section id="care" aria-labelledby="care-title" style="padding-top:20px">
+    <div class="wrap">
+      <div class="head"><h2 id="care-title">Optional care plans, so you never have to touch the site.</h2><p>Month to month. Cancel anytime, and the site stays yours.</p></div>
+      <div class="care">
+        <div><span class="amt">$49<small> a month</small></span><h3>Essential Care</h3><p>Every month I check that your site is up and your links, forms and call buttons work, and I fix minor issues.</p></div>
+        <div><span class="amt">$99<small> a month</small></span><h3>Business Care</h3><p>Everything in Essential, plus small updates whenever you need them: new hours, a fresh photo, a changed price.</p></div>
+        <div><span class="amt">$149<small> a month</small></span><h3>Growth Care</h3><p>More frequent updates, seasonal promo pages, and help keeping your Google listing in line with your site.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="head"><h2 id="work-title">Concept sites for local businesses.</h2><p>Each one is a sample business I designed from scratch to show a different style. Yours gets the same care, built around your real work and photos.</p></div>
+      <div class="cg">
+        <a href="work/harbor-air/">
+          <div class="th th-ha" aria-hidden="true"><span class="t">Comfort, restored today.</span><span class="r"></span><span class="b">Book a same-day visit</span></div>
+          <div class="cap"><h3>Harbor Air Heating &amp; Cooling</h3><p>HVAC in Huntington Beach. Midnight blue and silver, with a thermostat you can turn.</p></div>
+        </a>
+        <a href="work/juniper-ridge/">
+          <div class="th th-jr" aria-hidden="true"><span class="t">Gear up. Head out.</span><span class="h"></span><span class="p1"></span><span class="p2"></span>
+            <span class="bub" style="width:46px;height:46px;right:12%;top:12%"></span><span class="bub" style="width:22px;height:22px;right:30%;top:26%"></span><span class="bub" style="width:30px;height:30px;right:6%;top:40%"></span>
+            <span class="g">Shop camp gear</span></div>
+          <div class="cap"><h3>Juniper Ridge Camp Supply</h3><p>A camping supply store in Big Bear. Earthy and friendly, with glossy glass buttons.</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="bundle-title" style="padding-top:0">
+    <div class="wrap"><div class="bundle">
+      <svg viewBox="0 0 84 84" aria-hidden="true"><rect x="6" y="18" width="52" height="36" rx="6" fill="#0D1030" stroke="#5CF2FF" stroke-width="2"/><path d="M12 26h22M12 33h30M12 40h18" stroke="#7B5CFF" stroke-width="3" stroke-linecap="round"/><rect x="38" y="34" width="40" height="34" rx="6" fill="#FF3DB8" stroke="#E9ECFF" stroke-width="2"/><path d="M44 44h24M44 51h16" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+      <div><h3 id="bundle-title">Pair your new site with a postcard.</h3><p>My sister company, Cervus Advertising, mails your offer to 2,500 local homeowners. The postcard gets their attention, and your new website turns it into calls.</p></div>
+      <a class="btn btn-line" href="#contact">Ask about a bundle</a>
+    </div></div>
+  </section>
+
+  <section id="questions" aria-labelledby="faq-title" style="padding-top:20px">
+    <div class="wrap">
+      <h2 id="faq-title" style="margin-bottom:30px">Questions owners usually ask.</h2>
+      <div class="faq">
+        <details><summary>Is the mockup really free?</summary><p>Yes. I make your homepage mockup before we talk money. If you don't like it, you don't owe anything.</p></details>
+        <details><summary>Who owns the website and the domain?</summary><p>You do. Your domain is registered in your name, and if you ever leave, I hand everything over.</p></details>
+        <details><summary>What do you need from me?</summary><p>Your logo, a list of your services, your hours and service area, 5–10 photos, and a few reviews you like. I send a simple checklist, and I can supply professional stock photos if you're short.</p></details>
+        <details><summary>How many changes can I ask for?</summary><p>Starter includes one round of revisions, and Business and Premium include two. A round means you send all your changes in one list and I make them.</p></details>
+        <details><summary>Where is the site hosted, and what does it cost?</summary><p>Simple business sites run on fast, low-cost hosting. I'll tell you the exact cost before we start, and there are no surprise fees.</p></details>
+        <details><summary>Can I update the site myself later?</summary><p>You can, or a care plan covers it so you never have to. Most owners would rather send a text and have it done.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div>
+        <h2 id="contact-title">Want to see your new homepage?</h2>
+        <p class="sub" style="margin-top:18px">Tell me about your business and I'll send you a free mockup, usually within two business days.</p>
+        <div class="direct"><a href="tel:+17144008961">714-400-8961</a><a href="mailto:cervusdigital1@gmail.com">cervusdigital1@gmail.com</a></div>
+        <p class="fine">Ryan, Cervus Digital, Costa Mesa, California</p>
+      </div>
+      <form class="ask" id="ask" novalidate>
+        <div class="two">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-biz">Business name</label><input id="f-biz" name="business" autocomplete="organization" required></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="f-site">Current website, if any</label><input id="f-site" name="website" placeholder="yourbusiness.com"></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="f-type">What kind of business?</label><select id="f-type" name="type"><option>Contractor or home service</option><option>Barber, salon or spa</option><option>Gym or fitness</option><option>Restaurant or cafe</option><option>Outdoor or recreation</option><option>Something else</option></select></div>
+          <div class="field"><label for="f-pkg">Package you're leaning toward</label><select id="f-pkg" name="package"><option>Not sure yet</option><option>Starter</option><option>Business</option><option>Premium</option></select></div>
+        </div>
+        <div class="field"><label for="f-msg">Anything I should know?</label><textarea id="f-msg" name="message" rows="4" placeholder="Services you want front and center, colors you like, a site you admire…"></textarea></div>
+        <div><button class="btn btn-hot" type="submit">Request my free mockup</button></div>
+        <p class="note" id="form-note">This opens an email to me with your details filled in. You can also just call or text.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Cervus Digital, Costa Mesa, CA</span><span>Sister company of <a href="mailto:cervusadvertising@gmail.com">Cervus Advertising</a></span></div></footer>
+
+<script>
+(function(){
+  var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* neon grid floor */
+  var cv=document.getElementById('grid'),cx=cv.getContext('2d'),W=0,H=0,dpr=Math.min(2,window.devicePixelRatio||1),off=0,mx=0,my=0;
+  function size(){var r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);}
+  var stars=[];for(var i=0;i<90;i++)stars.push({x:Math.random(),y:Math.random()*.55,s:Math.random()*1.4+.3,t:Math.random()*6});
+  function draw(t){
+    cx.clearRect(0,0,W,H);var hz=H*.58,vx=W*.62+mx*40,g;
+    stars.forEach(function(s){var a=.35+.35*Math.sin(t/900+s.t);cx.fillStyle='rgba(200,215,255,'+a+')';cx.fillRect(s.x*W,s.y*H,s.s,s.s);});
+    g=cx.createRadialGradient(vx,hz,10,vx,hz,W*.5);g.addColorStop(0,'rgba(255,61,184,.35)');g.addColorStop(1,'rgba(255,61,184,0)');cx.fillStyle=g;cx.fillRect(0,0,W,H);
+    cx.lineWidth=1;
+    for(var k=-24;k<=24;k++){var x0=vx+k*(W/14);g=cx.createLinearGradient(0,hz,0,H);g.addColorStop(0,'rgba(92,242,255,.05)');g.addColorStop(1,'rgba(92,242,255,.85)');cx.strokeStyle=g;cx.beginPath();cx.moveTo(vx+k*6,hz);cx.lineTo(x0+k*W/7,H);cx.stroke();}
+    for(var j=0;j<18;j++){var p=((j+off)%18)/18,y=hz+Math.pow(p,2.4)*(H-hz);cx.strokeStyle='rgba(150,120,255,'+(.15+p*.75)+')';cx.beginPath();cx.moveTo(0,y);cx.lineTo(W,y);cx.stroke();}
+    cx.strokeStyle='rgba(92,242,255,.8)';cx.shadowColor='#5CF2FF';cx.shadowBlur=12;cx.beginPath();cx.moveTo(0,hz);cx.lineTo(W,hz);cx.stroke();cx.shadowBlur=0;
+  }
+  size();window.addEventListener('resize',size);
+  if(still)draw(0);else{(function loop(t){off+=.012;draw(t);requestAnimationFrame(loop);})(0);}
+
+  /* cursor glow */
+  var glow=document.querySelector('.glow');
+  if(!still)window.addEventListener('pointermove',function(e){glow.style.setProperty('--gx',e.clientX+'px');glow.style.setProperty('--gy',e.clientY+'px');mx=(e.clientX/window.innerWidth-.5);my=(e.clientY/window.innerHeight-.5);},{passive:true});
+  else glow.style.display='none';
+
+  /* headline decodes itself once */
+  var h=document.querySelector('[data-decode]'),final=h.textContent,glyphs='▚▞▖▗▘▙▛▜▟01<>/\\#$%&*+=';
+  if(!still){var t0=null;h.setAttribute('aria-label',final);
+    (function dec(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/1300),n=Math.floor(final.length*k),out='';
+      for(var i=0;i<final.length;i++){var c=final[i];out+=(i<n||c===' ')?c:glyphs[(Math.random()*glyphs.length)|0];}
+      h.textContent=out;if(k<1)requestAnimationFrame(dec);else h.textContent=final;})(performance.now());}
+
+  /* rotating business type */
+  var words=['contractors','barbers','gyms','restaurants','campgrounds','HVAC crews','landscapers','auto shops'],wi=0,rot=document.getElementById('rot');
+  if(!still)setInterval(function(){wi=(wi+1)%words.length;rot.textContent=words[wi];},2200);
+
+  /* live build monitor: cycles through the concept sites */
+  var builds=[{u:'harborair.com',n:'Harbor Air',k:'HVAC · Huntington Beach',a:'#0F1F47',b:'#C7D0DD',c:'#8FB8FF',bg:'#0A1430'},
+              {u:'juniperridgecamp.com',n:'Juniper Ridge Camp Supply',k:'Camping supply · Big Bear Lake',a:'#5C8A3C',b:'#F3EAD3',c:'#7CD6F2',bg:'#C9EEF7'},
+              {u:'yourbusiness.com',n:'Your business',k:'Free homepage mockup',a:'#2A1B5E',b:'#E9ECFF',c:'#FF3DB8',bg:'#0D1030'}],bi=0,sc=document.getElementById('screen');
+  function build(){var b=builds[bi];['a','b','c','bg'].forEach(function(k){sc.style.setProperty('--'+k,b[k]);});
+    document.getElementById('mUrl').textContent=b.u;document.getElementById('mName').textContent=b.n;document.getElementById('mKind').textContent=b.k;
+    var m=document.querySelector('.mon-in');m.classList.remove('build');void m.offsetWidth;m.classList.add('build');}
+  build();if(!still)setInterval(function(){bi=(bi+1)%builds.length;build();},5200);
+
+  /* pipeline line fills when it scrolls into view */
+  var pipe=document.getElementById('pipe');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){pipe.classList.add('on');o.disconnect();}});},{threshold:.4}).observe(pipe);}else pipe.classList.add('on');
+
+  /* before / after */
+  var stage=document.getElementById('baStage'),range=document.getElementById('baRange'),touched=false;
+  function setp(v){stage.style.setProperty('--pos',v+'%');}
+  range.addEventListener('input',function(){touched=true;setp(range.value);});
+  if(still){range.value=8;setp(8);}
+  else if('IntersectionObserver' in window){new IntersectionObserver(function(es,o){es.forEach(function(e){if(!e.isIntersecting)return;o.disconnect();var s=null;
+    (function step(ts){if(touched)return;if(!s)s=ts;var k=Math.min(1,(ts-s)/1500),v=90+(8-90)*(1-Math.pow(1-k,3));range.value=v;setp(v);if(k<1)requestAnimationFrame(step);})(performance.now());});},{threshold:.5}).observe(stage);}
+
+  /* delivery speed changes the prices */
+  var fee=0;
+  function money(n){return '$'+n.toLocaleString();}
+  document.querySelectorAll('.speeds button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.speeds button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});
+    fee=+b.dataset.fee;
+    document.querySelectorAll('.card').forEach(function(c){c.querySelector('.amt').textContent=money(+c.dataset.base+fee)+(c.dataset.plus?'+':'');c.querySelector('.eta').textContent=b.dataset.eta;});
+    document.getElementById('speedNote').textContent=fee?b.dataset.eta+'. The $'+fee+' speed fee is included in the prices below.':'Standard delivery is included in every price.';});});
+
+  /* package cards lean toward the pointer */
+  if(!still&&window.matchMedia('(hover:hover)').matches)document.querySelectorAll('.card').forEach(function(c){
+    c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='rotateY('+(x*7)+'deg) rotateX('+(-y*7)+'deg) translateZ(0)';});
+    c.addEventListener('pointerleave',function(){c.style.transform='';});});
+
+  /* picking a package fills it into the form */
+  document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('f-pkg').value=a.dataset.pick;});});
+
+  /* contact form opens an email */
+  document.getElementById('ask').addEventListener('submit',function(e){
+    e.preventDefault();var g=function(id){return (document.getElementById(id).value||'').trim();},note=document.getElementById('form-note');
+    if(!g('f-name')||!g('f-biz')){note.textContent='Add your name and business name so I know who to make the mockup for.';(g('f-name')?document.getElementById('f-biz'):document.getElementById('f-name')).focus();return;}
+    var speed=document.querySelector('.speeds [aria-pressed=true]').textContent;
+    var body='Name: '+g('f-name')+'\nBusiness: '+g('f-biz')+'\nPhone: '+g('f-phone')+'\nCurrent website: '+g('f-site')+'\nType: '+g('f-type')+'\nPackage: '+g('f-pkg')+' ('+speed+')\n\n'+g('f-msg');
+    window.location.href='mailto:cervusdigital1@gmail.com?subject='+encodeURIComponent('Free mockup request: '+g('f-biz'))+'&body='+encodeURIComponent(body);
+    note.textContent='Your email app should open with everything filled in. Hit send and I\'ll get started.';});
+})();
+</script>
+</body>
+</html>
